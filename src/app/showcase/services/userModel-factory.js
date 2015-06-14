@@ -5,12 +5,10 @@ angular.module('bookbottles-showcase')
     .factory('userModel', function () {
         // NOT FOR PRODUCTION USE -- MOCK SERVER
         var users = [
-            {username: 'bookbottles', password: 'showcase'},
-            {username: 'x', password: 'x'}
+            {username: 'bookbottles', password: 'showcase'}
         ];
 
         function userExists(user) {
-            console.log(users);
             return (users.filter(function (i) {
                 return (i.username === user)
             }).length > 0)

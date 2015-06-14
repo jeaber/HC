@@ -47,8 +47,7 @@ angular.module('bookbottles-showcase', [
                 resolve: {
                     loggedIn: function (userAuth) {
                         return userAuth.loggedIn();
-                    },
-                    onEnterFlag: function(){return true} // bc cant call controller func directly from state. . I think. .
+                    }
                 }
             });
         $urlRouterProvider.otherwise('/');
