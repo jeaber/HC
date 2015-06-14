@@ -2,7 +2,7 @@
  * Created by jbz on 6/12/2015.
  */
 angular.module('bookbottles-showcase')
-    .factory('twitService', function ($q) {
+    .factory('twitService', ['$q', function ($q) {
         var getTweets = function (query) {
             var deferred = $q.defer();
             socket.emit('getFeed', query);
@@ -15,4 +15,4 @@ angular.module('bookbottles-showcase')
         return {
             getTweets: getTweets
         };
-    });
+    }]);

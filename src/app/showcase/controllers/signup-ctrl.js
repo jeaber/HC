@@ -2,7 +2,7 @@
  * Created by jbz on 6/12/2015.
  */
 angular.module('bookbottles-showcase')
-    .controller('SignupController', function($scope, userModel, $state, $timeout, loggedIn) {
+    .controller('SignupController',['$scope', 'userModel', '$state', '$timeout', 'loggedIn', function($scope, userModel, $state, $timeout, loggedIn) {
     if (loggedIn === true)
         $state.go('dashboard');
     //todo - this logic should be enforced server side
@@ -28,4 +28,4 @@ angular.module('bookbottles-showcase')
         } else
             signup.error = 'Enter a login name'
     }
-});
+}]);

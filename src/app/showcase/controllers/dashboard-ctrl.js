@@ -2,7 +2,7 @@
  * Created by jbz on 6/12/2015.
  */
 angular.module('bookbottles-showcase')
-    .controller('DashController', function ($scope, $state, loggedIn, userAuth, twitService) {
+    .controller('DashController',['$scope', '$state', 'loggedIn', 'userAuth', 'twitService', function ($scope, $state, loggedIn, userAuth, twitService) {
         if (loggedIn !== true)
             $state.go('login');
 
@@ -19,4 +19,4 @@ angular.module('bookbottles-showcase')
                 $scope.tweets = tweets.statuses;
             });
         };
-    })
+    }])

@@ -2,7 +2,7 @@
  * Created by jbz on 6/12/2015.
  */
 angular.module('bookbottles-showcase')
-    .factory('userAuth', function ($cacheFactory, $state) {
+    .factory('userAuth', ['$cacheFactory', '$state', function ($cacheFactory, $state) {
         var userAuth = $cacheFactory('cacheId');
         userAuth.loggedIn = function () {
             return userAuth.get('session');
@@ -17,4 +17,4 @@ angular.module('bookbottles-showcase')
             return true;
         };
         return userAuth;
-    })
+    }])

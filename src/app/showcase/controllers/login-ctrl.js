@@ -2,7 +2,7 @@
  * Created by jbz on 6/12/2015.
  */
 angular.module('bookbottles-showcase')
-    .controller('LoginController', function($scope, userModel, $state, userAuth, loggedIn) {
+    .controller('LoginController',['$scope', 'userModel', '$state', 'userAuth', 'loggedIn', function($scope, userModel, $state, userAuth, loggedIn) {
         if (loggedIn === true)
             $state.go('dashboard');
         $scope.loggedIn = loggedIn;
@@ -14,4 +14,4 @@ angular.module('bookbottles-showcase')
             } else
                 this.message = 'Incorrect username or password.'
         }
-    });
+    }]);

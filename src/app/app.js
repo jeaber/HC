@@ -3,7 +3,7 @@ angular.module('bookbottles-showcase', [
     'ui.router',
     'templates-app'
 ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
         // Configure states here
         $stateProvider
             .state('home', {
@@ -53,4 +53,4 @@ angular.module('bookbottles-showcase', [
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
-    });
+    }]);
