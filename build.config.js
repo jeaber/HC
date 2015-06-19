@@ -3,13 +3,13 @@ module.exports = {
     build_dir: 'build',
 
     app_files: {
+        imgs: ['src/app/assets/**/*'],
         js: ['src/app/**/*.js'],
         // our partial templates
         atpl: ['src/app/**/*.tpl.html'],
         // the index.html
         html: ['src/index.html.ejs']
     },
-
     // Src files from Bower to include and minify
     vendor_files: {
         js: [

@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="bookbottles-showcase">
+<html ng-app="hintchirps">
 <head>
-    <title>AngularJS Showcase</title>
+    <title>Hintchirps</title>
     <base href='/'/>
     <meta name='fragment' content='!'/>
-
     <link href='http://fonts.googleapis.com/css?family=Hind:400,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <% styles.forEach( function (file) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
-    <% }); %>
 </head>
 <body>
 
 <div ui-view></div>
 
 <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+
 <% scripts.forEach( function (file) { %>
 <script type="text/javascript" src="<%= file %>"></script>
 <% }); %>
-
 </body>
 </html>

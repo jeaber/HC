@@ -12,6 +12,12 @@ module.exports = function (grunt) {
         },
 
         copy: {
+            imgs: {
+                src: ['<%= app_files.imgs %>'],
+                dest: '<%= build_dir %>/',
+                cwd: '.',
+                expand: true
+            },
             appjs: {
                 src: ['<%= app_files.js %>'],
                 dest: '<%= build_dir %>/',
@@ -55,6 +61,12 @@ module.exports = function (grunt) {
         },
 
         watch: {
+            imgs: {
+                files: [
+                    '<%= app_files.imgs %>'
+                ],
+                tasks: ['copy', 'index']
+            },
             jssrc: {
                 files: [
                     '<%= app_files.js %>'
