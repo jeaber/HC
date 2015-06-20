@@ -1,7 +1,7 @@
 /**
  * Created by jbz on 6/12/2015.
  */
-angular.module('bookbottles-showcase')
+angular.module('hintchirps')
     .factory('userModel', function () {
         // NOT FOR PRODUCTION USE -- MOCK SERVER
         var users = [

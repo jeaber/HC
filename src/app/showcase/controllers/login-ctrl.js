@@ -1,7 +1,7 @@
 /**
  * Created by jbz on 6/12/2015.
  */
-angular.module('bookbottles-showcase')
+angular.module('hintchirps')
     .controller('LoginController',['$scope', 'userModel', '$state', 'userAuth', 'loggedIn', function($scope, userModel, $state, userAuth, loggedIn) {
         if (loggedIn === true)
             $state.go('dashboard');

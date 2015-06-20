@@ -1,13 +1,12 @@
-var socket = io.connect('http://localhost:3444');
-angular.module('bookbottles-showcase', [
+angular.module('hintchirps', [
     'ui.router',
     'templates-app'
 ])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
-        // Configure states here
+        // Configure states herea
         $stateProvider
             .state('home', {
-                url: '/',
+                abstract: true,
                 templateUrl: 'showcase/templates/home.tpl.html',
                 controller: 'HomeController',
                 controllerAs: 'home',
@@ -16,6 +15,10 @@ angular.module('bookbottles-showcase', [
                         return userAuth.loggedIn();
                     }
                 }
+            })
+            .state('home.default', {
+                url: '/lol',
+                templateUrl: 'showcase/templates/home.default.html'
             })
             .state('signup', {
                 url: '/signup',
@@ -54,3 +57,6 @@ angular.module('bookbottles-showcase', [
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
     }]);
+function MainCtrl($state){
+    $state.transitionTo('contacts.list');
+}

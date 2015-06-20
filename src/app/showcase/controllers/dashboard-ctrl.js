@@ -1,8 +1,8 @@
 /**
  * Created by jbz on 6/12/2015.
  */
-angular.module('bookbottles-showcase')
-    .controller('DashController',['$scope', '$state', 'loggedIn', 'userAuth', 'twitService', function ($scope, $state, loggedIn, userAuth, twitService) {
+angular.module('hintchirps')
+    .controller('DashController', ['$scope', '$state', 'loggedIn', 'userAuth', 'twitService', function ($scope, $state, loggedIn, userAuth, twitService) {
         if (loggedIn !== true)
             $state.go('login');
 

@@ -6,7 +6,7 @@ module.exports = {
         imgs: ['src/app/assets/**/*'],
         js: ['src/app/**/*.js'],
         // our partial templates
-        atpl: ['src/app/**/*.tpl.html'],
+        atpl: ['src/app/**/*.html'],
         // the index.html
         html: ['src/index.html.ejs']
     },
