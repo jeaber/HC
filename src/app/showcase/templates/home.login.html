@@ -1,15 +1,14 @@
-<div class="container-fluid" style="background-color:aliceblue;height:4em;border-bottom:whitesmoke thin ridge;">
-    <div class="col-md-8 col-md-offset-2" style="margin-top:1em;">
-        <button ui-sref="home" class="btn btn-default">Home</button>
-        <button ng-hide='loggedIn' ui-sref="signup" class="btn btn-default">Signup</button>
-    </div>
-</div>
+<style>
+    .btn{width:46% !important;margin:1em 0 !important;}
+
+</style>
 <div class="container">
     <div class="col-md-4 centered col-md-offset-4">
-        <h1>Login</h1>
+        <h3 style="margin-top:-.1em;">Sign In</h3>
+
+        <p>{{login.message}}&nbsp;</p>
 
         <form name="loginForm" ng-submit="login.submit()" class="login-form">
-            <p>{{login.message}}</p>
 
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -23,7 +22,10 @@
                        class="form-control" id="password" name="password"
                        ng-model="login.password"/>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="row" style="padding:0 15px;">
+                <button type="submit" class="btn btn-primary btn-invert">Login</button>
+                <button type="submit" class="btn btn-primary btn pull-right" ui-sref="home.register">Register</button>
+            </div>
         </form>
     </div>
 </div>

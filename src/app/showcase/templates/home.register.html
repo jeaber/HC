@@ -2,25 +2,23 @@
     .ngInvalid.ng-dirty {
         border-color: #FA787E;
     }
+
     .ngValid.ng-dirty {
         border-color: #78FA89;
     }
+
+    .intro{
+        height:425px;
+    }
 </style>
-<div class="container-fluid" style="background-color:aliceblue;height:4em;border-bottom:whitesmoke thin ridge;">
-    <div class="col-md-8 col-md-offset-2" style="margin-top:1em;">
-        <div>
-            <button ui-sref="home" class="btn btn-default">Home</button>
-            <button ng-hide='loggedIn' ui-sref="login" class="btn btn-default">Login</button>
-        </div>
-    </div>
-</div>
+
 <div class="container">
     <div class="col-md-4 centered col-md-offset-4">
-        <h1 class="centered">Signup</h1>
+        <h4 class="centered">Register</h4>
+
+        <p style="clear:both;margin:1em;" id="ErrorMsgs">{{signup.error}}&nbsp;</p>
 
         <form ng-submit="signup.submit()">
-            <p style="clear:both;margin:1em;" id="ErrorMsgs">{{signup.error}}</p>
-
             <div class="form-group">
                 <label>Username:</label>
                 <input type="text"
@@ -46,7 +44,9 @@
                        ng-class="{'ngValid': signup.password===signup.passwordConfirm && signup.password.length>5,
                           'ngInvalid': signup.password!==signup.passwordConfirm || signup.password.length<5}"/>
             </div>
-            <button type="submit" class="btn btn-primary">Sign up</button>
+            <div class="row" style="padding-right:30px;">
+                <button type="submit" class="btn btn-primary btn-invert" style="width:100%;">Register</button>
+            </div>
         </form>
     </div>
 </div>

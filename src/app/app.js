@@ -20,9 +20,9 @@ angular.module('hintchirps', [
                 url: '/',
                 templateUrl: 'showcase/templates/home.default.html'
             })
-            .state('signup', {
-                url: '/signup',
-                templateUrl: 'showcase/templates/signup.tpl.html',
+            .state('home.register', {
+                url: '/register',
+                templateUrl: 'showcase/templates/home.register.html',
                 controller: 'SignupController',
                 controllerAs: 'signup',
                 resolve: {
@@ -31,9 +31,9 @@ angular.module('hintchirps', [
                     }
                 }
             })
-            .state('login', {
+            .state('home.login', {
                 url: '/login',
-                templateUrl: 'showcase/templates/login.tpl.html',
+                templateUrl: 'showcase/templates/home.login.html',
                 controller: 'LoginController',
                 controllerAs: 'login',
                 resolve: {
