@@ -16,7 +16,8 @@ module.exports = {
             'vendor/angular/angular.js',
             'vendor/angular-ui-router/release/angular-ui-router.js',
             'vendor/jquery/dist/jquery.js',
-            'vendor/bootstrap/dist/js/bootstrap.js'
+            'vendor/bootstrap/dist/js/bootstrap.js',
+            'vendor/firebase/firebase.js'
         ]
     },
 

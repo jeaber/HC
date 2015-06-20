@@ -1,8 +1,5 @@
-<style>
-
-</style>
-
-<div class="container-fluid navbar-fixed-top" style="background-color:whitesmoke;height:6em;border-bottom:darkgray 2px solid;">
+<div class="container-fluid navbar-fixed-top"
+     style="background-color:whitesmoke;height:5em;border-bottom:darkgray 2px solid;font-size:100%;">
     <div class="container">
         <div class="row">
             <!--<div class="col-md-8" style="margin-top:1em;">
@@ -10,23 +7,24 @@
                 <button role="button" ng-hide='loggedIn' ui-sref="login" class="btn btn-default">Login</button>
                 <button role="button" ng-show='loggedIn' ui-sref="dashboard" class="btn btn-default">Dashboard</button>
             </div>-->
-            <div class="col-md-4 navbar-brand col-md-offset-1 col-xs-9" style="margin-top:.4em;">
+            <div class="col-md-4 navbar-brand col-md-offset-1 col-xs-8 col-sm-5" style="">
                 <div class="row">
                     <img width="36" src="src/app/assets/img/mc.png">
-                    <a class="semi-bold" style="margin-top:.35em;margin-left:.25em;position:absolute;" ui-sref="home.default" href="#">HINTCHIRPS</a>
+                    <a class="semi-bold" style="margin-top:.35em;margin-left:.25em;position:absolute;"
+                       ui-sref="home.default" href="#">HINTCHIRPS</a>
                 </div>
             </div>
-            <ul class="col-md-6 col-md-offset-1 nav navbar-nav navbar navbar-right navbar-justified col-xs-3"
-                style="line-height:2em;">
-                <li class="hidden-sm hidden-xs"><a href="#">MINECRAFT</a></li>
-                <li class="hidden-sm hidden-xs"><a href="#">CLASH OF CLANS</a></li>
-                <li class="hidden-sm hidden-xs"><a href="#">BOARD</a></li>
-                <li><a href="#" ng-hide='loggedIn' ui-sref="home.login"><span style="border: slategray 1px solid; padding:0 1em;">SIGN IN</span></a></li>
+            <ul class="col-md-5 col-md-offset-2 nav navbar-nav navbar navbar-right navbar-justified col-xs-4 col-sm-7 text-center pull-right">
+                <li class="hidden-xs"><a href="#">MINECRAFT</a></li>
+                <li class="hidden-xs"><a href="#">CLASH OF CLANS</a></li>
+                <li class="hidden-xs"><a href="#">BOARD</a></li>
+                <li><a href="#" ng-hide='loggedIn' ui-sref="home.login"><span
+                        style="border: slategray 1px solid; padding:0 1em;">SIGN IN</span></a></li>
             </ul>
         </div>
     </div>
 </div>
-<section class="intro" style="margin-top:6em;">
+<section class="intro" style="margin-top:5em;">
     <div class="grassBG" style="padding:0;"></div>
     <div ui-view></div>
 </section>
@@ -34,19 +32,23 @@
 <section class="announcements">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-2 col-xs-8">
-                <div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-2 col-xs-8 col-xs-offset-1">
                     <h4>LATEST ANNOUNCEMENT</h4>
                 </div>
-                <div id="latest-announcement" style="clear:both;">
-                    <p>New site under development!</p>
+                <div class="col-sm-4 col-xs-3">
+                    <h4 class="hidden-xs">SERVER STATUS</h4>
+                    <h4 class="semi-bold visible-xs" style="color:forestgreen;">ONLINE</h4>
+
                 </div>
             </div>
-            <div class="col-md-4 col-xs-4">
-                <h4 class="hidden-sm hidden-xs">SERVER STATUS</h4>
-                <h4 class="semi-bold visible-sm visible-xs" style="color:forestgreen;">ONLINE</h4>
-                <div class="semi-bold hidden-sm hidden-xs" style="color:forestgreen;">ONLINE</div>
 
+
+            <div class="row">
+                <div id="latest-announcement" class="col-sm-6 col-sm-offset-2 col-xs-11 col-xs-offset-1" style="clear:both;">
+                    <p>New site under development!</p>
+                </div>
+                <div class="semi-bold hidden-xs col-md-4 col-xs-4" style="color:forestgreen;">ONLINE</div>
             </div>
         </div>
     </div>
@@ -78,7 +80,8 @@
 </section>
 <section class="info container">
     <div class="col-md-8 col-md-offset-2 text-center">
-        <p style="font-size:2em;">Hintchirps is a Minecraft server focused at giving players an intense, community driven gameplay by sticking
+        <p style="font-size:2em;">Hintchirps is a Minecraft server focused at giving players an intense, community
+            driven gameplay by sticking
             true to vanilla principles.</p>
     </div>
 </section>
