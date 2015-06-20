@@ -1,4 +1,47 @@
-//@import "../../node_modules/bootstrap/less/bootstrap.less";
+@import "../../vendor/bootstrap/less/bootstrap.less";
+
+/* responsive text queries */
+@media screen and (max-width: @screen-sm) {
+  input,div,span,a{
+    font-size: 95%;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4{
+    font-size: 16px;
+  }
+  p{font-size: 12px;
+  }
+  .btn{font-size:14px;
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  p,.btn,input,div,span,a{
+    font-size: 90%;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4{
+    font-size: 14px;
+  }
+  p{font-size: 10px;}
+
+}
 
 html {
   font-family: 'Hind', sans-serif; font-weight: 400;
@@ -9,12 +52,14 @@ body {
 p {
   font-family: 'Maven Pro', sans-serif;
 }
+.navbar-brand a{font-size:30px;}
+i{font-size:3em;}
 h1,h2,h3,h4,h5,h6{font-family: 'Maven Pro', sans-serif;}
 .semi-bold{ font-weight: 600;}
 a:hover{color:darkslategray;
   text-decoration: none;}
 a{color: darkslategray; font-weight: 600;}
-
+.stats p{font-size:1.15em;}
 .intro {
   z-index: -1;
   height: 350px;
@@ -32,7 +77,6 @@ a{color: darkslategray; font-weight: 600;}
 }
 
 .navbar-brand {
-  font-size: 2.5em;
 }
 
 .navbar li {
@@ -63,11 +107,9 @@ a{color: darkslategray; font-weight: 600;}
 }
 
 .intro .container h1 {
-  font-size: 3em;
 }
 
 .intro .container p {
-  font-size: 2em;
   font-weight: 400;
 }
 
@@ -123,7 +165,6 @@ a:-webkit-any-link {
 }
 
 .info p {
-  font-size: 2em;
 }
 
 .stat-block {
@@ -134,5 +175,3 @@ a:-webkit-any-link {
   height: 74px;
   min-width: 140px;
 }
-.stats i{font-size:2.5em;}
-.stat-value{font-size:1.25em;}
