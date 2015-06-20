@@ -17,7 +17,7 @@ angular.module('hintchirps', [
                 }
             })
             .state('home.default', {
-                url: '/lol',
+                url: '/',
                 templateUrl: 'showcase/templates/home.default.html'
             })
             .state('signup', {
